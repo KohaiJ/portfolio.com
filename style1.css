@@ -1,0 +1,135 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Definition du Body*/
+body{
+  color: #fff;
+  background: #111;
+  font-family: 'Poppins',sans-serif;
+}
+
+/*Bande1*/
+.bg {
+  animation:slide 13s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #222 50%, #333 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+/*Bande2*/
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:14s;
+}
+
+/*Bande3*/
+.bg3 {
+  animation-duration:15s;
+}
+
+/*Animation des bandes*/
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+/*Navbar*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-style: oblique;
+}
+
+.nom {
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+/*Contenue page*/
+.texte {
+  position: absolute;
+  display: flex;
+  top: 250px;
+  left: 350px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.texte2 {
+  position: absolute;
+  display: flex;
+  top: 290px;
+  left: 350px;
+  color: white;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.texte3 {
+  position: absolute;
+  display: flex;
+  top: 282px;
+  left: 625px;
+  color: white;
+  font-size: 45px;
+  font-family: Arial, sans-serif;
+}
+
+.texte4 {
+  position: absolute;
+  display: flex;
+  top: 350px;
+  left: 350px;
+  color: white;
+  font-size: 35px;
+  font-family: Arial, sans-serif;
+}
+
